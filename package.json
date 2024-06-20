@@ -31,6 +31,7 @@
   "author": "Alberto Rocha",
   "license": "MIT",
   "dependencies": {
+    "@nestjs/axios": "^3.0.2",
     "@nestjs/class-transformer": "^0.4.0",
     "@nestjs/class-validator": "^0.13.4",
     "@nestjs/common": "^10.3.8",
@@ -40,6 +41,7 @@
     "@nestjs/platform-fastify": "10.3.8",
     "@nestjs/swagger": "^7.3.1",
     "@nestjs/terminus": "^10.2.3",
+    "axios": "^1.7.2",
     "class-validator": "^0.14.1",
     "nest-winston": "^1.10.0",
     "reflect-metadata": "^0.2.2",
