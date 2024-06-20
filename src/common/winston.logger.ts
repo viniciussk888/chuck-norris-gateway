@@ -6,7 +6,7 @@ const winstonConfig: WinstonModuleOptions = {
   handleExceptions: true,
   transports: new transports.Console({
     format: winston.format.json(),
-    level: "info"
+    level: "debug"
   })
 };
 

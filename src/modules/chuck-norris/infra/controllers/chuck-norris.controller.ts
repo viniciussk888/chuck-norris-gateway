@@ -1,4 +1,4 @@
-import {Controller, Get, HttpStatus, Query} from "@nestjs/common";
+import {Controller, Get, HttpStatus, Logger, Query} from "@nestjs/common";
 import {ApiOperation, ApiResponse, ApiTags} from "@nestjs/swagger";
 import {ChuckNorrisService} from "../services/chuck-noris.service";
 import {JokeDTO} from "../../domain/dto/joke.dto";
@@ -6,6 +6,7 @@ import {JokeDTO} from "../../domain/dto/joke.dto";
 @ApiTags("Chuck Norris")
 @Controller("chuck-norris")
 export class ChuckNorrisController {
+  private readonly logger = new Logger(ChuckNorrisController.name);
   constructor(private readonly chuckNorrisService: ChuckNorrisService) {}
 
   @ApiOperation({
@@ -19,6 +20,7 @@ export class ChuckNorrisController {
   })
   @Get("random")
   async getRandomJoke() {
+    this.logger.log("/chuck-norris/random");
     return this.chuckNorrisService.getRandomJoke();
   }
 
@@ -33,6 +35,7 @@ export class ChuckNorrisController {
   })
   @Get("random-category")
   async getRandomJokeByCategory(@Query("category") category: string) {
+    this.logger.log(`/chuck-norris/random-category ${category}`);
     return this.chuckNorrisService.getRandomJokeByCategory(category);
   }
 
@@ -47,6 +50,7 @@ export class ChuckNorrisController {
   })
   @Get("categories")
   async getCategories() {
+    this.logger.log("/chuck-norris/categories");
     return this.chuckNorrisService.getCategories();
   }
 
@@ -61,6 +65,7 @@ export class ChuckNorrisController {
   })
   @Get("search")
   async searchJokes(@Query("query") query: string) {
+    this.logger.log(`/chuck-norris/search ${query}`);
     return this.chuckNorrisService.searchJokes(query);
   }
 }
