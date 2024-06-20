@@ -14,11 +14,15 @@ async function bootstrap() {
     new FastifyAdapter(),
     {
       logger: WinstonModule.createLogger(winstonTransports)
-    },
+    }
   );
   const logger = app.get<winston.Logger>(WINSTON_MODULE_NEST_PROVIDER);
 
   app.useLogger(logger);
+
+  app.enableCors({
+    origin: "*"
+  });
 
   setupSwagger(app);
 
