@@ -10,8 +10,8 @@ export class ChuckNorrisController {
   constructor(private readonly chuckNorrisService: ChuckNorrisService) {}
 
   @ApiOperation({
-    summary: "Get random joke",
-    description: "Get a random joke from Chuck Norris API"
+    summary: "Obtenha uma piada aleatória",
+    description: "Obtenha uma piada aleatória da API Chuck Norris"
   })
   @ApiResponse({
     status: HttpStatus.OK,
@@ -25,8 +25,8 @@ export class ChuckNorrisController {
   }
 
   @ApiOperation({
-    summary: "Get random joke by category",
-    description: "Get a random joke from Chuck Norris API by category"
+    summary: "Obtenha piadas aleatórias por categoria",
+    description: "Obtenha uma piada aleatória da API Chuck Norris por categoria"
   })
   @ApiResponse({
     status: HttpStatus.OK,
@@ -40,8 +40,8 @@ export class ChuckNorrisController {
   }
 
   @ApiOperation({
-    summary: "Get categories",
-    description: "Get all categories from Chuck Norris API"
+    summary: "Busca categorias",
+    description: "Busca categorias da API Chuck Norris"
   })
   @ApiResponse({
     status: HttpStatus.OK,
@@ -55,8 +55,8 @@ export class ChuckNorrisController {
   }
 
   @ApiOperation({
-    summary: "Search jokes",
-    description: "Search jokes from Chuck Norris API by query"
+    summary: "Busca piadas pelo texto",
+    description: "Busca piadas da API Chuck Norris pelo texto"
   })
   @ApiResponse({
     status: HttpStatus.OK,

@@ -13,8 +13,8 @@ export class HealthcheckController {
   ) {}
 
   @ApiOperation({
-    summary: "GetHealthcheck",
-    description: "get healthcheck status"
+    summary: "Status da aplicação",
+    description: "Retorna o status da aplicação"
   })
   @ApiResponse({
     status: HttpStatus.OK,
@@ -27,8 +27,8 @@ export class HealthcheckController {
   }
 
   @ApiOperation({
-    summary: "GetHealthcheckComplete",
-    description: "get healthcheck complete"
+    summary: "Status da aplicação completo",
+    description: "Retorna o status da aplicação completo"
   })
   @ApiResponse({
     status: HttpStatus.OK,
